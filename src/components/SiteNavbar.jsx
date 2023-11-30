@@ -83,7 +83,7 @@ return (
                     <Link className='border-2 border-[#20B15A] rounded-lg px-5 py-3 text-[#20B15A] font-semibold'  href={'/login'}>Login</Link>
                 </li>
                 <li>
-                    <Link className='rounded-lg bg-[#20B15A] px-5 py-3 text-white font-semibold'  href={'/signup'}>Signup</Link>
+                    <Link className='rounded-lg bg-[#20B15A] px-5 py-3 text-white font-semibold'  href={'/register'}>Register</Link>
                 </li>
             </ul>
         </nav>
@@ -93,7 +93,7 @@ return (
                 <div onClick={()=>{NavClick()}} className='navbar-backdrop  fixed inset-0 bg-gray-800 opacity-25' />
                 <nav className='relative flex flex-col py-6 px-6 h-full w-full bg-white border-r overflow-y-auto'>
                     <div className='flex items-center mb-8'>
-                        <a className='mr-auto text-3xl font-bold leading-none' href='#'>
+                        <a className='mr-auto text-3xl font-bold leading-none' href='/'>
                             <img className='h-10' src='atis-assets/logo/atis/atis-mono-black.svg' alt='' width='auto'/>
                         </a>
                         <button onClick={()=>{NavClick()}} className='navbar-close'>
@@ -105,7 +105,7 @@ return (
                     <div>
                         <ul>
                             <li className='mb-1'>
-                                <Link className='block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded' href={'/'}>Start</Link>
+                                <Link className='block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded' href={'/'}>Home</Link>
                             </li>
                             <li className='mb-1'>
                                 <Link className='block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded' href={'/team'}>Team</Link>
@@ -120,6 +120,11 @@ return (
                                 <Link className='block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded' href={'/testimonials'}>Testimonials</Link>
                             </li>
                         </ul>
+                        <hr />
+                        <div className="mt-5">
+                            <Link className='border-2 border-[#20B15A] rounded-lg px-2 py-1 text-[#20B15A] font-semibold mr-3'  href={'/login'}>Login</Link>
+                            <Link className='rounded-lg bg-[#20B15A] px-2 py-2 text-white font-semibold'  href={'/register'}>Register</Link>
+                        </div>
                     </div>
                 </nav>
             </div>

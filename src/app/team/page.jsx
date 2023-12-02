@@ -1,6 +1,6 @@
 import Contact from '@/components/Contact';
 import PageHeader from '@/components/shared/PageHeader'
-import TeamSection from '@/components/team/TeamSection'
+import TeamSection from '@/components/TeamSection'
 
 async function getData(){
   const res=await fetch(process.env.API_URL+"/api/TeamList");

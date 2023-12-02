@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React from 'react'
 
 const TeamSection = ({teamData}) => {
-    console.log(teamData)
   return (
     <section className="px-5 md:px-20 xl:px-72 py-10 bg-white">
         <div>
@@ -12,7 +11,7 @@ const TeamSection = ({teamData}) => {
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10'>
             {teamData.map((item, index)=> {
                 return (
-                    <div key={item['id']} className="rounded-xl shadow">
+                    <div key={item['id']} className="rounded-xl shadow-lg">
                         <div className="relative">
                             <img src={item['image']} alt="" className='rounded-t-xl object-contain ' width="100%" />
                             <div className="bg-white px-3 py-2 rounded-3xl absolute bottom-2 left-0 right-0 mx-auto w-fit flex items-center justify-between">

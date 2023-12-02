@@ -10,7 +10,7 @@ const TestimonialSection = ({testimonialData}) => {
         <div className="w-full flex flex-wrap justify-center">
             {testimonialData.map((item, index)=> {
                 return (
-                    <div className="rounded-xl shadow-lg px-3 py-5 m-3 my-2 text-center md:w-[40%] lg:w-[30%]">
+                    <div keey={item['id']} className="rounded-xl shadow-[-0px_4px_20px_2px_rgba(0,0,0,0.1)] px-3 py-5 m-3 my-2 text-center md:w-[40%] lg:w-[30%]">
                         <img src={item['image']} alt="" className='h-24 w-24 rounded-lg mx-auto' />
                         <p className="text-sm text-[#9D9D9D] mt-3">{item['msg']}</p>
                         <h3 className="uppercase font-bold xl:text-md mt-3 text-center">{item['name']}</h3>

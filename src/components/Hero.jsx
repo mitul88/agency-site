@@ -28,7 +28,7 @@ const Hero = async () => {
     const heroData = data['heroData']
 
   return (
-    <section className="pt-36 pb-10 bg-[#D7F5DC]">
+    <section className="pt-24 pb-10 bg-[#D7F5DC]">
         <div className='px-5 md:px-20 xl:px-72 flex flex-col md:flex-row'>
             <div className="text-center md:text-start md:w-1/2 mb-10 md:my-auto">
                 <h1 className="text-5xl md:text-3xl lg:text-5xl font-bold">{heroData['title']}</h1>

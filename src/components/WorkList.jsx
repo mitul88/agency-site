@@ -25,6 +25,14 @@ async function getData(){
 const WorkList = async () => {
     const data = await getData(); 
     const works = data['workData']
+    const stats = data['statData']
+    const statData = Object.keys(stats)
+    const statItems = statData.filter((item)=> {
+        if(item !== "id" && item !== "created_at" && item !== "updated_at" ){
+            return true
+        }
+    })
+
   return (
     <section className="px-5 md:px-20 xl:px-48 py-10 bg-white">
         <div>
@@ -43,6 +51,19 @@ const WorkList = async () => {
                             <h5 className="text-sm">{item['des']}</h5>
                         </div>
                         <Link href="/" className="w-32 mx-auto md:ml-5 flex items-center font-bold mb-10">Learn More <img src="/right-arrow.png" className="ml-3 h-4" alt="" /></Link>
+                    </div>
+                )
+            })}
+        </div>
+        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-5">
+            {statItems.map((item, index)=> {
+                return (
+                    <div className="rounded-lg shadow-lg p-5 flex flex-col justify-center items-center" key={index}>
+                        <div className="rounded-xl bg-[#D7F5DC] p-5 flex justify-center items-center w-fit">
+                            <img src={item+`.png`}alt="" />
+                        </div>
+                        <h4 className="text-lg font-bold mt-5 mb-2">{stats[item]}</h4>
+                        <h5 className="text-sm font-bold capitalize">{item}</h5>
                     </div>
                 )
             })}

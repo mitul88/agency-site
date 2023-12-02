@@ -34,7 +34,7 @@ const WorkList = async () => {
     })
 
   return (
-    <section className="px-5 md:px-20 xl:px-48 py-10 bg-white">
+    <section className="px-5 md:px-20 xl:px-72 py-10 bg-white">
         <div>
             <h3 className="text-[#20B15A] uppercase font-bold mb-5">work list</h3>
             <h2 className="text-2xl font-bold text-black w-96 mb-10">We provide the Perfect Solution to your business growth</h2>

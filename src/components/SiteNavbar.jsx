@@ -48,7 +48,7 @@ const SiteNavbar = () => {
     const current=usePathname();
   
 return (
-    <div>
+    <div className="absolute top-0 right-0 left-0">
         <nav className="relative lg:px-20 px-6 py-6 flex justify-between items-center bg-transparent">
             <a className='text-3xl font-bold leading-none' href='#'>
                 <img src='/DesignAGENCY.png' alt='' width='auto'/>

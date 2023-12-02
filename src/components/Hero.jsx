@@ -36,13 +36,13 @@ const Hero = async () => {
                 <Link href="/" className="rounded-lg bg-[#20B15A] text-white px-5 py-3 ">Get Started</Link>
             </div>
             <div className='w-full md:w-1/2 px-4 rounded-xl'>
-                <div className='flex flex-wrap lg:mb-4 rounded-xl'>
-                    <img className='w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-xl' src={heroData['image1']} alt=''/>
-                    <img className='w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-xl' src={heroData['image2']} alt=''/>
+                <div className='flex flex-wrap  rounded-xl'>
+                    <img className='w-full md:w-1/2 lg:w-1/3 h-64 p-1 object-cover rounded-xl' src={heroData['image1']} alt=''/>
+                    <img className='w-full md:w-1/2 lg:w-2/3 h-64 p-1 object-cover rounded-xl' src={heroData['image2']} alt=''/>
                 </div>
-                <div className='flex flex-wrap lg:mb-4 rounded-xl'>
-                    <img className='w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-xl' src={heroData['image3']} alt=''/>
-                    <img className='w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-xl' src={heroData['image4']} alt=''/>
+                <div className='flex flex-wrap  rounded-xl'>
+                    <img className='w-full md:w-1/2 lg:w-2/3 h-64 p-1 object-cover rounded-xl' src={heroData['image3']} alt=''/>
+                    <img className='w-full md:w-1/2 lg:w-1/3 h-64 p-1 object-cover rounded-xl' src={heroData['image4']} alt=''/>
                 </div>
             </div>
         </div>

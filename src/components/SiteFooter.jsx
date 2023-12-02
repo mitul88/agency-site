@@ -1,10 +1,21 @@
 import Link from 'next/link'
-import React from 'react'
 
-const SiteFooter = () => {
+async function getData(){
+    const res=await fetch(process.env.API_URL+"/api/SocialLink");
+    if(!res.ok){
+        throw new Error("Social link Calling Fail");
+    }
+    return res.json();
+}
+
+
+const SiteFooter = async () => {
 
     const date = new Date();
     const currentYear = date.getFullYear();
+
+    const data = await getData()
+
   return (
     <footer className='bg-black text-white p-20'>
         <div className="flex flex-col md:flex-row justify-between items-center">
@@ -12,15 +23,13 @@ const SiteFooter = () => {
                 <h1 className="text-2xl lg:text-3xl font-bold mb-5">Web Logo</h1>
                 <p className="text-sm md:text-md lg:text-lg">Some Footer text about the agency. Just a little description to help people understand you better.</p>
                 <div className='flex justify-between w-48 mt-3'>
-                    <div className="flex flex-col items-center justify-center bg-[#20B15A] rounded-full px-4 py-3">
-                        <img src="/facebook.png" alt="" />
-                    </div>
-                    <div className="flex flex-col items-center justify-center bg-[#20B15A] rounded-full px-3 py-3">
-                        <img src="/twitter.png" alt="" />
-                    </div>
-                    <div className="flex flex-col items-center justify-center bg-[#20B15A] rounded-full px-4 py-3">
-                        <img src="/instagram.png" alt="" />
-                    </div>
+                    {data.map((item, index)=> {
+                        return (
+                            <Link href={`https://${item['link']}`} key={item['id']} className={`flex flex-col items-center justify-center bg-[#20B15A] rounded-full py-3 ${item['name']==="facebook"? "px-4" : "px-3"}`}>
+                                <img src={`/${item['name']}.png`} alt="" />
+                            </Link>
+                        )
+                    })}
                 </div>
             </div>
             <div className="w-full md:w-1/5 mb-10 md:mb-0">

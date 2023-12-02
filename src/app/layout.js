@@ -5,9 +5,17 @@ import SiteFooter from '@/components/SiteFooter'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Agency App',
-  description: 'The best agency you can trust',
+export async function generateMetadata(){
+  const res=await fetch(process.env.API_URL+"/api/SiteMeta/home");
+  const JSON=await res.json();
+  return{
+      title:JSON[0]['title'],
+      description:JSON[0]['description'],
+      keywords:JSON[0]['keywords'],
+      openGraph: {
+          images: JSON[0]['image'],
+      },
+  }
 }
 
 export default function RootLayout({ children }) {

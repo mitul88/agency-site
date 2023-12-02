@@ -1,5 +1,5 @@
 export async function generateMetadata(){
-    const res=await fetch(process.env.API_URL+"api/SiteMeta/projects");
+    const res=await fetch(process.env.API_URL+"/api/SiteMeta/projects");
     const JSON=await res.json();
     return{
         title:JSON[0]['title'],

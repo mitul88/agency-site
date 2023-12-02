@@ -32,7 +32,7 @@ const Hero = async () => {
         <div className='px-5 md:px-20 xl:px-72 flex flex-col md:flex-row'>
             <div className="text-center md:text-start md:w-1/2 mb-10 md:my-auto">
                 <h1 className="text-5xl md:text-3xl lg:text-5xl font-bold">{heroData['title']}</h1>
-                <h4 className="font-semibold mt-5 md:text-sm lg:text-md mb-10">{heroData['description']}</h4>
+                <h4 className="font-semibold mt-5 md:text-sm lg:text-lg mb-10 lg:w-96">{heroData['description']}</h4>
                 <Link href="/" className="rounded-lg bg-[#20B15A] text-white px-5 py-3 ">Get Started</Link>
             </div>
             <div className='w-full md:w-1/2 px-4 rounded-xl'>

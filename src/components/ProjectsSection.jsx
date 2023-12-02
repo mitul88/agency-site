@@ -6,7 +6,7 @@ const ProjectsSection = ({projectData}) => {
     <section className="px-5 md:px-20 xl:px-72 py-10 bg-white">
         <div>
             <h3 className="text-[#20B15A] uppercase font-bold mb-5">all projects</h3>
-            <h2 className="text-2xl font-bold text-black w-96 mb-10">Btter Agency/SEO Solutions at Your Fingertips </h2>
+            <h2 className="text-2xl font-bold text-black w-96 mb-10">Better Agency/SEO Solutions at Your Fingertips </h2>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10'>
           {projectData.map((item, index)=> {

@@ -80,6 +80,9 @@ return (
                     <Link className={current==="/testimonials"?" text-[#20B15A] font-semibold":" text-black font-semibold hover:text-[#20B15A] "}  href={'/testimonials'}>Testimonials</Link>
                 </li>
                 <li>
+                    <Link className={current==="/contact"?" text-[#20B15A] font-semibold":" text-black font-semibold hover:text-[#20B15A] "}  href={'/contact'}>Contact</Link>
+                </li>
+                <li>
                     <Link className='border-2 border-[#20B15A] rounded-lg px-5 py-3 text-[#20B15A] font-semibold'  href={'/login'}>Login</Link>
                 </li>
                 <li>

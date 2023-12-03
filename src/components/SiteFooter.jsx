@@ -50,6 +50,9 @@ const SiteFooter = async () => {
                     <li className='mb-1'>
                         <Link className='block' href={'/testimonials'}>Testimonials</Link>
                     </li>
+                    <li className='mb-1'>
+                        <Link className='block' href={'/contact'}>Contact</Link>
+                    </li>
                 </ul>
             </div>
             <div className="w-full md:w-1/5 mb-10 md:mb-0">

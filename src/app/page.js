@@ -1,4 +1,4 @@
-import Contact from '@/components/Contact'
+import Subscription from '@/components/Subscription'
 import Featured from '@/components/Featured'
 import Hero from '@/components/Hero'
 import WorkList from '@/components/WorkList'
@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <WorkList />
       <Featured />
-      <Contact />
+      <Subscription />
     </>
   )
 }

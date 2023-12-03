@@ -1,4 +1,4 @@
-import Contact from '@/components/Contact';
+import Subscription from '@/components/Subscription';
 import TestimonialSection from '@/components/TestimonialSection'
 import PageHeader from '@/components/shared/PageHeader'
 
@@ -16,7 +16,7 @@ const page = async() => {
     <>
       <PageHeader />
       <TestimonialSection testimonialData={data}/>
-      <Contact />
+      <Subscription />
     </>
   )
 }

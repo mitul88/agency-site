@@ -2,7 +2,7 @@
 import toast, { Toaster } from 'react-hot-toast';
 import {useState} from "react";
 
-const Contact = () => {
+const Subscription = () => {
 
   let [FormValue,SetFormValue]=useState({subscription:""})
 
@@ -17,6 +17,9 @@ const Contact = () => {
 
   const FormSubmit=async (e) => {
     e.preventDefault();
+
+    let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
     if (FormValue.subscription.length === 0) {
         toast.error('Email Required');
     } else {
@@ -27,10 +30,12 @@ const Contact = () => {
         let serverResponse;
         if(!rawResponse.ok) {
           serverResponse = "Something is not right! Please try again later."
+        } else if(!FormValue.subscription.match(emailRegex) ) {
+          toast.error('Valid Email Required');
         } else {
           serverResponse = await rawResponse.text()
         }
-        toast.error(JSON.parse(serverResponse).message)
+        toast.success(JSON.parse(serverResponse).message)
     }
 }
 
@@ -52,4 +57,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Subscription

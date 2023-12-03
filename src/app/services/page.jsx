@@ -1,4 +1,4 @@
-import Contact from '@/components/Contact'
+import Subscription from '@/components/Subscription'
 import ServiceSection from '@/components/ServiceSection'
 import PageHeader from '@/components/shared/PageHeader'
 
@@ -16,7 +16,7 @@ const page = async () => {
     <>
       <PageHeader />
       <ServiceSection serviceData={data} />
-      <Contact /> 
+      <Subscription /> 
     </>
   )
 }

@@ -1,4 +1,4 @@
-import Contact from '@/components/Contact';
+import Subscription from '@/components/Subscription';
 import PageHeader from '@/components/shared/PageHeader'
 import TeamSection from '@/components/TeamSection'
 
@@ -16,7 +16,7 @@ const page = async () => {
     <>
       <PageHeader />
       <TeamSection teamData={data} />
-      <Contact />
+      <Subscription />
     </>
   )
 }

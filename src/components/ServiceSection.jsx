@@ -10,7 +10,7 @@ const ServiceSection = ({serviceData}) => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10'>
           {serviceData.map((item, index)=> {
             return (
-              <div className="shadow-[-0px_4px_20px_2px_rgba(0,0,0,0.1)] rounded-xl p-10">
+              <div key={index} className="shadow-[-0px_4px_20px_2px_rgba(0,0,0,0.1)] rounded-xl p-10">
                 <h3 className="uppercase font-bold text-lg mb-5">{item['title']}</h3>
                 <p className="text-[#9D9D9D] text-sm capitalize mb-10">{item['des']}</p>
     
